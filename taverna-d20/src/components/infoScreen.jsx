@@ -91,10 +91,10 @@ export default function InfoScreen({ onBack, darkMode, toggleTheme }) {
       <div className="p-6 pb-20">
         <header className="mb-12 mt-4">
           <h1 className="text-3xl font-black uppercase tracking-tighter text-d20-azul dark:text-d20-amarelo">
-            Missions & Lore
+            D20 | Informações
           </h1>
           <p className="text-zinc-500 dark:text-zinc-400 text-sm italic">
-            Central de Inteligência da Taverna
+            O bar mais divertido da cidade
           </p>
         </header>
 
