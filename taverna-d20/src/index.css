@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-d20-azul: #1c4f71;
+  --color-d20-amarelo: #e3942c;
+  --color-d20-fundo-dark: #1a1a1a;
+  --color-d20-fundo-light: #f8f9fa;
+  --font-retro: "Press Start 2P", system-ui;
+}
+
+/* Força o Tailwind 4 a reconhecer a classe .dark manual */
+@variant dark (&:where(.dark, .dark *));
+
+/* Esconder a barra de rolagem do menu de categorias */
+@utility no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;           /* Chrome, Safari and Opera */
+  }
+}
+/* Reset básico para garantir que o fundo mude */
+body {
+  @apply transition-colors duration-500;
+}
