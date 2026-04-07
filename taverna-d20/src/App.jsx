@@ -1,9 +1,9 @@
 // App.jsx
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import WelcomeScreen from './components/WelcomeScreen';
-import MenuScreen from './components/MenuScreen';
-import InfoScreen from './components/InfoScreen'; // Importe a nova tela
+import WelcomeScreen from './components/welcomeScreen';
+import MenuScreen from './components/menuScreen';
+import InfoScreen from './components/infoScreen'; // Importe a nova tela
 import logoImg from './assets/logo.png';
 
 export default function App() {
