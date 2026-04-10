@@ -10,28 +10,28 @@ export const menuData = [
         "image": "/images/fotos/cerveja01.jpg"
       },
       {
-        "name": "Longneck heineken",
+        "name": "Corona",
         "price": "13,00",
-        "desc": "A clássica verde gelada para acompanhar qualquer partida.",
+        "desc": "Longneck - Leveza e refrescância para um clima descontraído no bar.",
+        "image": "/images/fotos/cerveja05.jpg"
+      },
+      {
+        "name": "Heineken",
+        "price": "13,00",
+        "desc": "Longneck - A clássica verde gelada para acompanhar qualquer partida.",
         "image": "/images/fotos/cerveja02.webp"
       },
       {
-        "name": "Longneck heineken zero",
+        "name": "Heineken zero",
         "price": "13,00",
-        "desc": "Todo o sabor da Heineken sem álcool para quem precisa dirigir a nave.",
+        "desc": "Longneck - Todo o sabor da Heineken sem álcool para quem precisa dirigir a nave.",
         "image": "/images/fotos/cerveja03.jpg"
       },
       {
-        "name": "Longneck spaten",
+        "name": "Spaten",
         "price": "13,00",
-        "desc": "Cerveja puro malte com herança alemã e descida suave.",
+        "desc": "Longneck - Cerveja puro malte com herança alemã e descida suave.",
         "image": "/images/fotos/cerveja04.jpg"
-      },
-      {
-        "name": "Longneck corona",
-        "price": "13,00",
-        "desc": "Leveza e refrescância para um clima descontraído no bar.",
-        "image": "/images/fotos/cerveja05.jpg"
       },
       {
         "name": "Patagonia amber lager",
@@ -53,87 +53,69 @@ export const menuData = [
       }
     ]
   },
-  {
-    "id": "bebidas-sem-alcool",
-    "title": "Bebidas Sem Álcool",
+    {
+    "id": "doses",
+    "title": "Doses",
     "items": [
       {
-        "name": "Água",
-        "price": "4,00",
-        "desc": "O item básico de sobrevivência em qualquer inventário.",
-        "image": "/images/fotos/agua01.webp"
+        "name": "Cachaça",
+        "price": "5,00",
+        "desc": "O espírito brasileiro em uma dose. Simples e potente.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Água com gás",
-        "price": "4,50",
-        "desc": "Hidratação com aquele \"sparkle\" extra.",
-        "image": "/images/fotos/agua02.jpg"
+        "name": "Campari",
+        "price": "10,00",
+        "desc": "Dose do clássico aperitivo amargo italiano de cor rubi.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Água tônica",
-        "price": "8,00",
-        "desc": "Ideal para limpar o paladar ou misturar em poções.",
-        "image": "/images/fotos/refri09.webp"
+        "name": "Conhaque",
+        "price": "10,00",
+        "desc": "Aquecimento imediato para dias frios na taverna.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Coca-cola",
-        "price": "8,00",
-        "desc": "O combustível clássico para qualquer maratona de jogos ou filmes.",
-        "image": "/images/fotos/refri01.webp"
+        "name": "Cynar",
+        "price": "7,00",
+        "desc": "Dose do licor de alcachofra para quem aprecia sabores herbáceos.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Coca-cola zero",
-        "price": "8,00",
-        "desc": "Todo o sabor icônico da Coca, mas com zero de penalidade nos seus status de dieta.",
-        "image": "/images/fotos/refri02.png"
+        "name": "Gin",
+        "price": "10,00",
+        "desc": "Dose de gin dry para quem prefere montar sua própria poção.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Guaraná antártica",
-        "price": "8,00",
-        "desc": "O sabor original do Brasil para acompanhar seu loot de porções.",
-        "image": "/images/fotos/refri03.png"
+        "name": "Jack daniels",
+        "price": "26,00",
+        "desc": "O clássico do Tennessee. Sabor amadeirado e inconfundível.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Guaraná antártica zero",
-        "price": "8,00",
-        "desc": "Energia tropical com zero açúcar para manter a agilidade no turno.",
-        "image": "/images/fotos/refri04.webp"
+        "name": "Red label",
+        "price": "20,00",
+        "desc": "O whisky escocês que dispensa apresentações. Marcante e equilibrado.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Fanta laranja/uva",
-        "price": "8,00",
-        "desc": "Explosão de cor e sabor frutado para dar um \"glow up\" no seu pedido.",
-        "image": "/images/fotos/refri05.jpg"
+        "name": "Rum",
+        "price": "10,00",
+        "desc": "A bebida preferida dos piratas e aventureiros dos sete mares.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Tubaina",
-        "price": "8,00",
-        "desc": "O sabor da nostalgia em cada gole. Um verdadeiro clássico das antigas.",
-        "image": "/images/fotos/refri06.webp"
+        "name": "Vodka",
+        "price": "10,00",
+        "desc": "Base versátil para qualquer drink ou para uma dose gelada.",
+        "image": "/images/fotos/doses.jpg"
       },
       {
-        "name": "Sprite",
-        "price": "8,00",
-        "desc": "Refrescância cítrica e cristalina para limpar o paladar entre uma jogada e outra.",
-        "image": "/images/fotos/refri07.webp"
-      },
-      {
-        "name": "Monster",
-        "price": "15,00",
-        "desc": "Para quem precisa de um \"Power Up\" imediato e regeneração de estamina rápida.",
-        "image": "/images/fotos/refri08.jpg"
-      },
-      {
-        "name": "Mocktail",
-        "price": "14,00",
-        "desc": "Toda a complexidade de um drink autoral, mas sem álcool. Para heróis sóbrios.",
-        "image": "/images/fotos/mocktail.jpg"
-      },
-      {
-        "name": "Chocolate quente",
-        "price": "14,00",
-        "desc": "Conforto em caneca: cremoso e perfeito para dias frios.",
-        "image": "/images/fotos/chocolate-quente.avif"
+        "name": "Fireball",
+        "price": "25,00",
+        "desc": "Licor de whisky com canela. Cuidado: causa dano de fogo (do bom)!",
+        "image": "/images/fotos/doses.jpg"
       }
     ]
   },
@@ -341,13 +323,13 @@ export const menuData = [
       },
       {
         "name": "Cynar tonica",
-        "price": "18,00",
+        "price": "16,00",
         "desc": "Notas botânicas de alcachofra em uma mistura leve e surpreendentemente refrescante.",
         "image": "/images/fotos/cynar.png"
       },
       {
         "name": "Double cynar tonica",
-        "price": "30,00",
+        "price": "28,00",
         "desc": "Para quem já subiu de nível e aprecia o dobro do sabor herbáceo do Cynar.",
         "image": "/images/fotos/cynar.png"
       },
@@ -395,175 +377,91 @@ export const menuData = [
       }
     ]
   },
-  {
-    "id": "lanches",
-    "title": "Lanches",
-    "items": [
-      {
-        "name": "X20 carne com batata",
-        "price": "30,00",
-        "desc": "O combo completo: nosso burger épico acompanhado de batatas crocantes.",
-        "image": "/images/fotos/X20.jpg"
-      },
-      {
-        "name": "X20 carne sem batata",
-        "price": "26,00",
-        "desc": "Foco total no burger! O X20 clássico para quem quer ir direto ao ponto.",
-        "image": "/images/fotos/x20 sem batata.png"
-      },
-      {
-        "name": "Pão com pernil",
-        "price": "16,00",
-        "desc": "Clássico de taverna: pernil desfiado e temperado servido no pão fresquinho.",
-        "image": "/images/fotos/pao com pernil.jpg"
-      },
-      {
-        "name": "X20 vegetariano com batata",
-        "price": "27,00",
-        "desc": "A opção veggie completa com batatas. Sabor que não deixa ninguém para trás.",
-        "image": "/images/fotos/X20.jpg"
-      },
-      {
-        "name": "X20 de calabresa com batata",
-        "price": "28,00",
-        "desc": "Hambúrguer de calabresa potente servido com batatas fritas douradas.",
-        "image": "/images/lanches.jpg"
-      },
-      {
-        "name": "X20 vegetariano sem batata",
-        "price": "24,00",
-        "desc": "O burger vegetariano para quem quer uma refeição leve e saborosa.",
-        "image": "/images/fotos/x20 sem batata.png"
-      },
-      {
-        "name": "X20 de calabresa sem batata",
-        "price": "24,00",
-        "desc": "O sabor marcante da calabresa, adocicado da cebola e rúcula pra contrastar, sem acompanhamentos.",
-        "image": "/images/lanches.jpg"
-      },
-      {
-        "name": "Pão com linguiça",
-        "price": "16,00",
-        "desc": "Tradição e sabor: linguiça artesanal com vinagrete no pão crocante.",
-        "image": "/images/fotos/pao linguiça.webp"
-      },
-      {
-        "name": "X20 vegano com batata",
-        "price": "25,00",
-        "desc": "Loot 100% vegetal acompanhado de batatas fritas crocantes.",
-        "image": "/images/fotos/X20.jpg"
-      },
-      {
-        "name": "X20 vegano sem batata",
-        "price": "22,00",
-        "desc": "O burger vegano essencial para quem busca sabor e consciência.",
-        "image": "/images/fotos/x20 sem batata.png"
-      }
-    ]
-  },
-  {
-    "id": "porcoes",
-    "title": "Porções",
-    "items": [
-      {
-        "name": "Calabresa acebolada",
-        "price": "28,00",
-        "desc": "A porção perfeita para dividir: calabresa fatiada com muita cebola na chapa.",
-        "image": "/images/fotos/calabreza.jpg"
-      },
-      {
-        "name": "Amendoins",
-        "price": "10,00",
-        "desc": "O petisco de entrada ideal para acompanhar sua primeira cerveja.",
-        "image": "/images/fotos/amendoim.jpg"
-      },
-      {
-        "name": "Onion rings",
-        "price": "30,00",
-        "desc": "Anéis de cebola empanados e super crocantes. Um acerto crítico de textura.",
-        "image": "/images/fotos/onion.jpg"
-      },
-      {
-        "name": "D3",
-        "price": "30,00",
-        "desc": "O trio lendário: Polenta, batata frita e mandioca para dividir com os amigos.",
-        "image": "/images/fotos/D3.jpg"
-      },
-      {
-        "name": "D3 com queijo",
-        "price": "34,00",
-        "desc": "O trio lendário (fritas, polenta e mandioca) coberto com queijo derretido.",
-        "image": "/images/fotos/D3.jpg"
-      },
-      {
-        "name": "D3 com queijo e bacon",
-        "price": "38,00",
-        "desc": "A party definitiva: Polenta, fritas e mandioca cobertas com muito queijo e bacon.",
-        "image": "/images/fotos/D3.jpg"
-      },
-      {
-        "name": "D3 com bacon",
-        "price": "34,00",
-        "desc": "Trio clássico de petiscos acompanhado de bacon crocante.",
-        "image": "/images/fotos/D3.jpg"
-      },
-      {
-        "name": "Fritas",
-        "price": "29,00",
-        "desc": "Batatas fritas tradicionais, sempre quentes e crocantes.",
-        "image": "/images/fotos/01.jpg"
-      },
-      {
-        "name": "Fritas com bacon",
-        "price": "34,00",
-        "desc": "A porção clássica de batatas com o sabor defumado do bacon.",
-        "image": "/images/fotos/02.jpg"
-      },
-      {
-        "name": "Fritas com queijo",
-        "price": "34,00",
-        "desc": "Batatas douradas e crocantes sob uma camada generosa de queijo derretido.",
-        "image": "/images/fotos/02.jpg"
-      },
-      {
-        "name": "Fritas com queijo e bacon",
-        "price": "38,00",
-        "desc": "O loot mais desejado: fritas, queijo derretido e bacon em cubos.",
-        "image": "/images/fotos/02.jpg"
-      },
-      {
-        "name": "Mandioca frita",
-        "price": "26,00",
-        "desc": "Mandioca macia por dentro e crocante por fora, frita na hora.",
-        "image": "/images/fotos/01.jpg"
-      },
-      {
-        "name": "Frango mostarda e mel",
-        "price": "30,00",
-        "desc": "Suculentos pedaços de frango com o molho agridoce que é um acerto crítico.",
-        "image": "/images/porcoes.jpg"
-      },
-      {
-        "name": "Linguiça",
-        "price": "28,00",
-        "desc": "Porção de linguiça acebolada preparada no capricho.",
-        "image": "/images/porcoes.jpg"
-      },
-      {
-        "name": "Polenta",
-        "price": "29,00",
-        "desc": "Polenta frita em palitos, douradinha e irresistível.",
-        "image": "/images/fotos/01.jpg"
-      },
-      {
-        "name": "Batata rústica",
-        "price": "28,00",
-        "desc": "Batatas com casca, temperadas e fritas com um toque caseiro.",
-        "image": "/images/fotos/01.jpg"
-      }
-    ]
-  },
     {
+    "id": "bebidas-sem-alcool",
+    "title": "Bebidas Sem Álcool",
+    "items": [
+      {
+        "name": "Água",
+        "price": "4,00",
+        "desc": "O item básico de sobrevivência em qualquer inventário.",
+        "image": "/images/fotos/agua01.webp"
+      },
+      {
+        "name": "Água com gás",
+        "price": "4,50",
+        "desc": "Hidratação com aquele \"sparkle\" extra.",
+        "image": "/images/fotos/agua02.jpg"
+      },
+      {
+        "name": "Água tônica",
+        "price": "8,00",
+        "desc": "Ideal para limpar o paladar ou misturar em poções.",
+        "image": "/images/fotos/refri09.webp"
+      },
+      {
+        "name": "Coca-cola",
+        "price": "8,00",
+        "desc": "O combustível clássico para qualquer maratona de jogos ou filmes.",
+        "image": "/images/fotos/refri01.webp"
+      },
+      {
+        "name": "Coca-cola zero",
+        "price": "8,00",
+        "desc": "Todo o sabor icônico da Coca, mas com zero de penalidade nos seus status de dieta.",
+        "image": "/images/fotos/refri02.png"
+      },
+      {
+        "name": "Guaraná antártica",
+        "price": "8,00",
+        "desc": "O sabor original do Brasil para acompanhar seu loot de porções.",
+        "image": "/images/fotos/refri03.png"
+      },
+      {
+        "name": "Guaraná antártica zero",
+        "price": "8,00",
+        "desc": "Energia tropical com zero açúcar para manter a agilidade no turno.",
+        "image": "/images/fotos/refri04.webp"
+      },
+      {
+        "name": "Fanta laranja/uva",
+        "price": "8,00",
+        "desc": "Explosão de cor e sabor frutado para dar um \"glow up\" no seu pedido.",
+        "image": "/images/fotos/refri05.jpg"
+      },
+      {
+        "name": "Tubaina",
+        "price": "8,00",
+        "desc": "O sabor da nostalgia em cada gole. Um verdadeiro clássico das antigas.",
+        "image": "/images/fotos/refri06.webp"
+      },
+      {
+        "name": "Sprite",
+        "price": "8,00",
+        "desc": "Refrescância cítrica e cristalina para limpar o paladar entre uma jogada e outra.",
+        "image": "/images/fotos/refri07.webp"
+      },
+      {
+        "name": "Monster",
+        "price": "15,00",
+        "desc": "Para quem precisa de um \"Power Up\" imediato e regeneração de estamina rápida.",
+        "image": "/images/fotos/refri08.jpg"
+      },
+      {
+        "name": "Mocktail",
+        "price": "14,00",
+        "desc": "Toda a complexidade de um drink autoral, mas sem álcool. Para heróis sóbrios.",
+        "image": "/images/fotos/mocktail.jpg"
+      },
+      {
+        "name": "Chocolate quente",
+        "price": "14,00",
+        "desc": "Conforto em caneca: cremoso e perfeito para dias frios.",
+        "image": "/images/fotos/chocolate-quente.avif"
+      }
+    ]
+  },
+  {
     "id": "sucos",
     "title": "Sucos",
     "items": [
@@ -642,6 +540,174 @@ export const menuData = [
     ]
   },
   {
+    "id": "lanches",
+    "title": "Lanches",
+    "items": [
+      {
+        "name": "X20 carne com batata",
+        "price": "30,00",
+        "desc": "O combo completo: nosso burger épico acompanhado de batatas crocantes.",
+        "image": "/images/fotos/X20.jpg"
+      },
+      {
+        "name": "X20 carne sem batata",
+        "price": "26,00",
+        "desc": "Foco total no burger! O X20 clássico para quem quer ir direto ao ponto.",
+        "image": "/images/fotos/x20 sem batata.png"
+      },
+      {
+        "name": "X20 vegetariano com batata",
+        "price": "27,00",
+        "desc": "A opção veggie completa com batatas. Sabor que não deixa ninguém para trás.",
+        "image": "/images/fotos/X20.jpg"
+      },
+      {
+        "name": "X20 vegetariano sem batata",
+        "price": "24,00",
+        "desc": "O burger vegetariano para quem quer uma refeição leve e saborosa.",
+        "image": "/images/fotos/x20 sem batata.png"
+      },
+      {
+        "name": "X20 vegano com batata",
+        "price": "25,00",
+        "desc": "Loot 100% vegetal acompanhado de batatas fritas crocantes.",
+        "image": "/images/fotos/X20.jpg"
+      },
+      {
+        "name": "X20 vegano sem batata",
+        "price": "22,00",
+        "desc": "O burger vegano essencial para quem busca sabor e consciência.",
+        "image": "/images/fotos/x20 sem batata.png"
+      },
+      {
+        "name": "X20 de calabresa com batata",
+        "price": "28,00",
+        "desc": "Hambúrguer de calabresa potente servido com batatas fritas douradas.",
+        "image": "/images/lanches.jpg"
+      },
+      {
+        "name": "X20 de calabresa sem batata",
+        "price": "24,00",
+        "desc": "O sabor marcante da calabresa, adocicado da cebola e rúcula pra contrastar, sem acompanhamentos.",
+        "image": "/images/lanches.jpg"
+      },
+      {
+        "name": "Pão com linguiça",
+        "price": "16,00",
+        "desc": "Tradição e sabor: linguiça artesanal com vinagrete no pão crocante.",
+        "image": "/images/fotos/pao linguiça.webp"
+      },
+      {
+        "name": "Pão com pernil",
+        "price": "16,00",
+        "desc": "Clássico de taverna: pernil desfiado e temperado servido no pão fresquinho.",
+        "image": "/images/fotos/pao com pernil.jpg"
+      }
+    ]
+  },
+  {
+    "id": "porcoes",
+    "title": "Porções",
+    "items": [
+      {
+        "name": "Amendoins",
+        "price": "10,00",
+        "desc": "O petisco de entrada ideal para acompanhar sua primeira cerveja.",
+        "image": "/images/fotos/amendoim.jpg"
+      },
+      {
+        "name": "D3",
+        "price": "30,00",
+        "desc": "O trio lendário: Polenta, batata frita e mandioca para dividir com os amigos.",
+        "image": "/images/fotos/D3.jpg"
+      },
+      {
+        "name": "D3 com queijo",
+        "price": "34,00",
+        "desc": "O trio lendário (fritas, polenta e mandioca) coberto com queijo derretido.",
+        "image": "/images/fotos/D3.jpg"
+      },
+      {
+        "name": "D3 com bacon",
+        "price": "34,00",
+        "desc": "Trio clássico de petiscos acompanhado de bacon crocante.",
+        "image": "/images/fotos/D3.jpg"
+      },
+      {
+        "name": "D3 com queijo e bacon",
+        "price": "38,00",
+        "desc": "A party definitiva: Polenta, fritas e mandioca cobertas com muito queijo e bacon.",
+        "image": "/images/fotos/D3.jpg"
+      },
+      {
+        "name": "Fritas",
+        "price": "29,00",
+        "desc": "Batatas fritas tradicionais, sempre quentes e crocantes.",
+        "image": "/images/fotos/01.jpg"
+      },
+      {
+        "name": "Fritas com bacon",
+        "price": "34,00",
+        "desc": "A porção clássica de batatas com o sabor defumado do bacon.",
+        "image": "/images/fotos/02.jpg"
+      },
+      {
+        "name": "Fritas com queijo",
+        "price": "34,00",
+        "desc": "Batatas douradas e crocantes sob uma camada generosa de queijo derretido.",
+        "image": "/images/fotos/02.jpg"
+      },
+      {
+        "name": "Fritas com queijo e bacon",
+        "price": "38,00",
+        "desc": "O loot mais desejado: fritas, queijo derretido e bacon em cubos.",
+        "image": "/images/fotos/02.jpg"
+      },
+      {
+        "name": "Mandioca frita",
+        "price": "26,00",
+        "desc": "Mandioca macia por dentro e crocante por fora, frita na hora.",
+        "image": "/images/fotos/01.jpg"
+      },
+      {
+        "name": "Frango mostarda e mel",
+        "price": "30,00",
+        "desc": "Suculentos pedaços de frango com o molho agridoce que é um acerto crítico.",
+        "image": "/images/porcoes.jpg"
+      },
+      {
+        "name": "Calabresa acebolada",
+        "price": "28,00",
+        "desc": "A porção perfeita para dividir: calabresa fatiada com muita cebola na chapa.",
+        "image": "/images/fotos/calabreza.jpg"
+      },
+      {
+        "name": "Linguiça",
+        "price": "28,00",
+        "desc": "Porção de linguiça acebolada preparada no capricho.",
+        "image": "/images/porcoes.jpg"
+      },
+      {
+        "name": "Polenta",
+        "price": "29,00",
+        "desc": "Polenta frita em palitos, douradinha e irresistível.",
+        "image": "/images/fotos/01.jpg"
+      },
+      {
+        "name": "Onion rings",
+        "price": "30,00",
+        "desc": "Anéis de cebola empanados e super crocantes. Um acerto crítico de textura.",
+        "image": "/images/fotos/onion.jpg"
+      },
+      {
+        "name": "Batata rústica",
+        "price": "28,00",
+        "desc": "Batatas com casca, temperadas e fritas com um toque caseiro.",
+        "image": "/images/fotos/01.jpg"
+      }
+    ]
+  },
+  {
     "id": "sobremesas",
     "title": "Sobremesas",
     "items": [
@@ -704,72 +770,6 @@ export const menuData = [
         "price": "16,00",
         "desc": "Duas bolas de sorvete premium com calda generosa de chocolate ou morango.",
         "image": "/images/fotos/16.jpg"
-      }
-    ]
-  },
-  {
-    "id": "doses",
-    "title": "Doses",
-    "items": [
-      {
-        "name": "Cachaça",
-        "price": "5,00",
-        "desc": "O espírito brasileiro em uma dose. Simples e potente.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Campari",
-        "price": "10,00",
-        "desc": "Dose do clássico aperitivo amargo italiano de cor rubi.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Conhaque",
-        "price": "10,00",
-        "desc": "Aquecimento imediato para dias frios na taverna.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Cynar",
-        "price": "10,00",
-        "desc": "Dose do licor de alcachofra para quem aprecia sabores herbáceos.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Gin",
-        "price": "10,00",
-        "desc": "Dose de gin dry para quem prefere montar sua própria poção.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Jack daniels",
-        "price": "26,00",
-        "desc": "O clássico do Tennessee. Sabor amadeirado e inconfundível.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Red label",
-        "price": "20,00",
-        "desc": "O whisky escocês que dispensa apresentações. Marcante e equilibrado.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Rum",
-        "price": "10,00",
-        "desc": "A bebida preferida dos piratas e aventureiros dos sete mares.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Vodka",
-        "price": "10,00",
-        "desc": "Base versátil para qualquer drink ou para uma dose gelada.",
-        "image": "/images/fotos/doses.jpg"
-      },
-      {
-        "name": "Fireball",
-        "price": "25,00",
-        "desc": "Licor de whisky com canela. Cuidado: causa dano de fogo (do bom)!",
-        "image": "/images/fotos/doses.jpg"
       }
     ]
   },
