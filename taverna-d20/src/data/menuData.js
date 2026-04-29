@@ -10,6 +10,12 @@ export const menuData = [
         "image": "/images/fotos/cerveja01.jpg"
       },
       {
+        "name": "Original - 600ml",
+        "price": "14,00",
+        "desc": "Clássica, gelada e sem erro.",
+        "image": "/images/fotos/original.webp"
+      },
+      {
         "name": "Corona",
         "price": "13,00",
         "desc": "Longneck - Leveza e refrescância para um clima descontraído no bar.",
@@ -580,15 +586,15 @@ export const menuData = [
         "image": "/images/fotos/x20 sem batata.png"
       },
       {
-        "name": "X20 de calabresa com batata",
+        "name": "X20 Cheddar Bomb com batata",
         "price": "28,00",
-        "desc": "Hambúrguer de calabresa potente servido com batatas fritas douradas.",
+        "desc": "O encontro perfeito entre o salgado do bacon e o adocicado da cebola caramelizada. Leva burger de carne, muito cheddar derretido e bacon em cubinhos. É o novo favorito da galera!",
         "image": "/images/lanches.jpg"
       },
       {
-        "name": "X20 de calabresa sem batata",
+        "name": "X20 Cheddar Bomb sem batata",
         "price": "24,00",
-        "desc": "O sabor marcante da calabresa, adocicado da cebola e rúcula pra contrastar, sem acompanhamentos.",
+        "desc": "O encontro perfeito entre o salgado do bacon e o adocicado da cebola caramelizada. Leva burger de carne, muito cheddar derretido e bacon em cubinhos, sem acompanhamentos.",
         "image": "/images/lanches.jpg"
       },
       {
