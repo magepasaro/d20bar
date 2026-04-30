@@ -1,13 +1,12 @@
-// App.jsx
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import WelcomeScreen from './components/welcomeScreen';
-import MenuScreen from './components/menuScreen';
-import InfoScreen from './components/infoScreen'; // Importe a nova tela
+import WelcomeScreen from './components/WelcomeScreen';
+import MenuScreen from './components/MenuScreen';
+import InfoScreen from './components/InfoScreen';
+import ChallengeScreen from './components/ChallengeScreen'; // 1. Importe a nova tela
 import logoImg from './assets/logo.png';
 
 export default function App() {
-  // Agora usamos uma string para identificar a página ativa
   const [currentScreen, setCurrentScreen] = useState('welcome'); 
   const [darkMode, setDarkMode] = useState(true);
 
@@ -23,7 +22,7 @@ export default function App() {
               key="welcome"
               logoImg={logoImg} 
               onStart={() => setCurrentScreen('menu')} 
-              onInfo={() => setCurrentScreen('info')} // Passa a função para o botão de info
+              onInfo={() => setCurrentScreen('info')} 
             />
           )}
 
@@ -33,6 +32,7 @@ export default function App() {
               darkMode={darkMode} 
               toggleTheme={toggleTheme} 
               onBack={() => setCurrentScreen('welcome')} 
+              onChallenge={() => setCurrentScreen('challenge')} // 2. Passa a função para o botão do cardápio
             />
           )}
 
@@ -42,6 +42,16 @@ export default function App() {
               darkMode={darkMode}
               toggleTheme={toggleTheme}
               onBack={() => setCurrentScreen('welcome')} 
+            />
+          )}
+
+          {/* 3. Lógica para exibir a tela de Dinâmicas */}
+          {currentScreen === 'challenge' && (
+            <ChallengeScreen 
+              key="challenge"
+              darkMode={darkMode}
+              toggleTheme={toggleTheme}
+              onBack={() => setCurrentScreen('menu')} // Volta para o cardápio
             />
           )}
 
