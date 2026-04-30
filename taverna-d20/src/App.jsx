@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import WelcomeScreen from './components/WelcomeScreen';
-import MenuScreen from './components/MenuScreen';
-import InfoScreen from './components/InfoScreen';
-import ChallengeScreen from './components/ChallengeScreen'; // 1. Importe a nova tela
+import WelcomeScreen from './components/WelcomeScreen.jsx';
+import MenuScreen from './components/MenuScreen.jsx';
+import InfoScreen from './components/InfoScreen.jsx';
+import ChallengeScreen from './components/ChallengeScreen.jsx';
 import logoImg from './assets/logo.png';
 
 export default function App() {
