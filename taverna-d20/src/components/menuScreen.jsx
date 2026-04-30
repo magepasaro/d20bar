@@ -4,7 +4,7 @@ import { Sun, Moon, Search, X } from 'lucide-react';
 import { menuData } from '../data/menuData';
 import { ArrowLeft } from 'lucide-react';
 
-export default function MenuScreen({ darkMode, toggleTheme, onBack }) {
+export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge }) {
   const [activeSection, setActiveSection] = useState('bebidas');
   const [searchTerm, setSearchTerm] = useState("");
   const navRef = useRef(null);
@@ -130,11 +130,14 @@ export default function MenuScreen({ darkMode, toggleTheme, onBack }) {
       </main>
 
       <button 
-        onClick={() => alert("Ei, psiu! Nossa equipe às vezes se empolga com a música e esquece da vida, então chega junto no balcão ou dá aquele tchauzinho básico que a gente corre aí pra te atender!")}
-        className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-d20-azul dark:bg-d20-amarelo text-white dark:text-d20-azul px-6 py-3 rounded-full shadow-2xl z-50 whitespace-nowrap active:scale-95 transition-all"
+      onClick={onChallenge}
+      className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-d20-azul dark:bg-d20-amarelo text-white dark:text-d20-azul px-6 py-3 rounded-full shadow-2xl z-50 whitespace-nowrap active:scale-95 transition-all "
       >
-        <span className="font-black text-sm uppercase tracking-widest">Fazer Pedido</span>
-      </button>
+      <span className="font-black text-sm uppercase tracking-widest flex items-center gap-2">
+      Não sabe o que pedir?
+      </span>
+</button>
+
     </motion.div>
   );
 }
