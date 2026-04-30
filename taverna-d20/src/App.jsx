@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import WelcomeScreen from './components/WelcomeScreen.jsx';
-import MenuScreen from './components/MenuScreen.jsx';
-import InfoScreen from './components/InfoScreen.jsx';
-import ChallengeScreen from './components/ChallengeScreen.jsx';
+import WelcomeScreen from './components/welcomeScreen';
+import MenuScreen from './components/menuScreen';
+import InfoScreen from './components/infoScreen';
+import ChallengeScreen from './components/ChallengeScreen';
 import logoImg from './assets/logo.png';
 
 export default function App() {
