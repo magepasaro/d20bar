@@ -45,7 +45,7 @@ export default function WelcomeScreen({ logoImg, onStart, onInfo }) {
         <motion.button 
           variants={itemVariants}
           onClick={onStart} 
-          className="bg-d20-amarelo text-d20-azul px-10 py-5 rounded-full font-retro text-[12px] shadow-[0_0_10px_rgba(227,148,44,0.6)] active:scale-95 transition-all uppercase hover:bg-white hover:text-d20-azul"
+          className="bg-d20-amarelo text-d20-azul px-10 py-5 rounded-full font-retro text-[12px] active:scale-95 transition-all uppercase hover:bg-white hover:text-d20-azul"
         >
           Press Start 2P
         </motion.button>
