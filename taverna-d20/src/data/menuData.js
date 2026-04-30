@@ -262,7 +262,7 @@ export const menuData = [
         "image": "/images/fotos/hadouken01.jpeg"
       },
       {
-        "name": "Lagoa azul",
+        "name": "Sharkboy",
         "price": "20,00",
         "desc": "Refrescância visual e gustativa em um clássico de cor azul hipnotizante.",
         "image": "/images/fotos/lagoa azul.jpg"
