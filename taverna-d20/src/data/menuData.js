@@ -383,19 +383,19 @@ export const menuData = [
     "items": [
       {
         "name": "Gato Negro | Malbec - Taça",
-        "price": "25,00",
+        "price": "18,00",
         "desc": "Marcante como um encontro que deixa saudade.",
         "image": "/images/fotos/vinho.jpeg"
       },
       {
         "name": "Gato Negro | Pinot Noir - Taça",
-        "price": "25,00",
+        "price": "18,00",
         "desc": "Leve como um flerte e envolvente como uma boa playlist.",
         "image": "/images/fotos/vinho.jpeg"
       },
       {
         "name": "Gato Negro | Cabernet - Taça",
-        "price": "25,00",
+        "price": "18,00",
         "desc": "A escolha certa para quem busca equilíbrio e conexão.",
         "image": "/images/fotos/vinho.jpeg"
       },
