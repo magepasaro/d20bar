@@ -10,6 +10,12 @@ export const menuData = [
         "image": "/images/fotos/cerveja01.jpg"
       },
       {
+        "name": "Original - 600ml",
+        "price": "14,00",
+        "desc": "Clássica, gelada e sem erro.",
+        "image": "/images/fotos/original.webp"
+      },
+      {
         "name": "Corona",
         "price": "13,00",
         "desc": "Longneck - Leveza e refrescância para um clima descontraído no bar.",
