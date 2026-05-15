@@ -7,6 +7,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwmgqWeOvVjekON-dyCwZsm
 
 export default function QuizPage({ darkMode, toggleTheme, onBack }) {
   const [equipe, setEquipe] = useState('');
+  const [integrantes, setIntegrantes] = useState(''); // Novo Estado
   const [fotoBase64, setFotoBase64] = useState('');
   const [equipeRegistrada, setEquipeRegistrada] = useState(false);
   const [dadosQuiz, setDadosQuiz] = useState({ perguntaAtiva: null, status: 'FECHADO', tempoOriginal: 120, ranking: [] });
@@ -16,9 +17,9 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
   const [tempoRestante, setTempoRestante] = useState(120);
   const timerRef = useRef(null);
 
-  // Inicialização e Recuperação de Estado
   useEffect(() => {
     setEquipe(localStorage.getItem('d20_equipe') || '');
+    setIntegrantes(localStorage.getItem('d20_integrantes') || ''); // Recupera do cache
     setFotoBase64(localStorage.getItem('d20_foto') || '');
     setEquipeRegistrada(localStorage.getItem('d20_registrada') === 'true');
   }, []);
@@ -28,28 +29,26 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
       const res = await fetch(API_URL, { redirect: 'follow' });
       const data = await res.json();
       
-      // Lógica de Reset Dinâmico por Versão (Célula B6 da Planilha)
       const versaoSalva = localStorage.getItem('d20_quiz_version');
       if (data.versaoQuiz && data.versaoQuiz !== versaoSalva) {
         localStorage.clear();
         localStorage.setItem('d20_quiz_version', data.versaoQuiz);
         setEquipe('');
+        setIntegrantes('');
         setFotoBase64('');
         setEquipeRegistrada(false);
         setJaRespondeu(false);
         setResposta('');
-        return; // Interrompe para processar o reset
+        return;
       }
 
       setDadosQuiz(prev => {
         const novaPerguntaId = data.perguntaAtiva?.id;
         const respondidaID = localStorage.getItem('d20_last_responded_id');
 
-        // Se a pergunta mudou (ID novo)
         if (novaPerguntaId !== prev.perguntaAtiva?.id) {
           setTempoRestante(data.tempoOriginal || 120);
           setResposta('');
-          
           if (novaPerguntaId && String(novaPerguntaId) === respondidaID) {
             setJaRespondeu(true);
           } else {
@@ -93,7 +92,6 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
     if (!equipe.trim()) return;
     setLoading(true);
     try {
-      // Verificação de nome duplicado baseada no ranking atual
       const nomeJaExiste = dadosQuiz.ranking.some(
         (time) => time.nome.toLowerCase() === equipe.trim().toLowerCase()
       );
@@ -107,10 +105,16 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
       await fetch(API_URL, {
         method: 'POST',
         mode: 'no-cors',
-        body: JSON.stringify({ equipe: equipe.trim(), id: "REGISTRO", foto: fotoBase64 })
+        body: JSON.stringify({ 
+          equipe: equipe.trim(), 
+          integrantes: integrantes.trim(), // Envia os integrantes
+          id: "REGISTRO", 
+          foto: fotoBase64 
+        })
       });
       setEquipeRegistrada(true);
       localStorage.setItem('d20_equipe', equipe.trim());
+      localStorage.setItem('d20_integrantes', integrantes.trim());
       localStorage.setItem('d20_foto', fotoBase64);
       localStorage.setItem('d20_registrada', 'true');
     } catch (e) {
@@ -166,7 +170,7 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
           <section className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
             <div className="text-center space-y-2">
               <h2 className="text-2xl font-black uppercase tracking-tighter text-d20-azul dark:text-d20-amarelo">Nova Equipe</h2>
-              <p className="text-xs text-zinc-500 uppercase font-bold tracking-widest">Prepare seu avatar e nome</p>
+              <p className="text-xs text-zinc-500 uppercase font-bold tracking-widest">Monte seu bando</p>
             </div>
             
             <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-xl border border-zinc-100 dark:border-zinc-800 space-y-6">
@@ -183,13 +187,22 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
                   <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
                 </label>
               </div>
-              <input 
-                type="text"
-                value={equipe}
-                onChange={(e) => setEquipe(e.target.value)}
-                placeholder="Nome da sua equipe"
-                className="w-full py-4 px-0 bg-transparent border-b-2 border-zinc-200 dark:border-zinc-800 text-center text-lg font-bold focus:border-d20-amarelo outline-none transition-all dark:text-white"
-              />
+              <div className="space-y-4">
+                <input 
+                  type="text"
+                  value={equipe}
+                  onChange={(e) => setEquipe(e.target.value)}
+                  placeholder="Nome da sua equipe"
+                  className="w-full py-2 px-0 bg-transparent border-b-2 border-zinc-200 dark:border-zinc-800 text-center text-lg font-bold focus:border-d20-amarelo outline-none transition-all dark:text-white"
+                />
+                <input 
+                  type="text"
+                  value={integrantes}
+                  onChange={(e) => setIntegrantes(e.target.value)}
+                  placeholder="Membros (Ex: João, Maria, Leo)"
+                  className="w-full py-2 px-0 bg-transparent border-b-2 border-zinc-200 dark:border-zinc-800 text-center text-sm font-medium focus:border-d20-amarelo outline-none transition-all dark:text-zinc-300"
+                />
+              </div>
               <button 
                 onClick={handleRegistrarEquipe} 
                 disabled={loading || !equipe} 
@@ -214,6 +227,11 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
               <div>
                 <p className="text-[9px] font-black text-zinc-400 uppercase tracking-widest leading-none">Equipe</p>
                 <h3 className="text-base font-black text-d20-azul dark:text-d20-amarelo uppercase leading-tight">{equipe}</h3>
+                {integrantes && (
+                  <p className="text-[10px] font-medium text-zinc-500 dark:text-zinc-400 italic">
+                    Integrantes: {integrantes}
+                  </p>
+                )}
               </div>
             </div>
             <div className="h-8 w-[1px] bg-zinc-100 dark:bg-zinc-800" />
@@ -224,7 +242,6 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
           </motion.div>
         )}
 
-        {/* Área do Jogo */}
         <AnimatePresence mode="wait">
           {mostrarPergunta ? (
             <motion.section 
@@ -234,7 +251,6 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
               exit={{ opacity: 0, scale: 0.98 }}
               className="space-y-8"
             >
-              {/* Cronômetro Moderno */}
               <div className="relative h-2 w-full bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden">
                 <motion.div 
                   className={`absolute h-full left-0 ${tempoRestante < 15 ? 'bg-red-500' : 'bg-d20-amarelo'}`}
@@ -249,7 +265,6 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
                 </span>
               </div>
 
-              {/* Card da Pergunta */}
               <div className="space-y-8 text-center">
                 <h3 className="text-2xl font-black text-zinc-800 dark:text-white leading-tight uppercase tracking-tighter">
                   {dadosQuiz.perguntaAtiva.pergunta}
@@ -315,7 +330,6 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
           )}
         </AnimatePresence>
 
-        {/* Ranking sempre visível após registro */}
         {equipeRegistrada && <Ranking dados={dadosQuiz.ranking} />}
       </main>
     </motion.div>
