@@ -93,6 +93,17 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
     if (!equipe.trim()) return;
     setLoading(true);
     try {
+      // Verificação de nome duplicado baseada no ranking atual
+      const nomeJaExiste = dadosQuiz.ranking.some(
+        (time) => time.nome.toLowerCase() === equipe.trim().toLowerCase()
+      );
+
+      if (nomeJaExiste) {
+        alert("Ei Bobinho! 🤡 Já temos uma equipe com esse nome, escolha outro!");
+        setLoading(false);
+        return;
+      }
+
       await fetch(API_URL, {
         method: 'POST',
         mode: 'no-cors',
