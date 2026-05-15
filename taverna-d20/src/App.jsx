@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import WelcomeScreen from './components/WelcomeScreen';
-import MenuScreen from './components/MenuScreen';
-import InfoScreen from './components/InfoScreen';
+import WelcomeScreen from './components/welcomeScreen';
+import MenuScreen from './components/menuScreen';
+import InfoScreen from './components/infoScreen';
 import ChallengeScreen from './components/ChallengeScreen';
 import QuizPage from './components/QuizPage';
 import logoImg from './assets/logo.png';
