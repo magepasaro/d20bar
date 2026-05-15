@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Info } from 'lucide-react';
+
+const API_URL = 'https://script.google.com/macros/s/AKfycbwmgqWeOvVjekON-dyCwZsmI1sAinDyIGGEYz4f7SWXKO-vpyosJohSDI6rKznqq1eQ/exec';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -15,7 +17,30 @@ const itemVariants = {
   visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-export default function WelcomeScreen({ logoImg, onStart, onInfo }) {
+export default function WelcomeScreen({ logoImg, onStart, onInfo, onQuiz }) {
+  const [quizAtivo, setQuizAtivo] = useState(() => {
+    return localStorage.getItem('d20_quiz_visivel') === 'ATIVO';
+  });
+
+  useEffect(() => {
+    const checkQuizStatus = async () => {
+      try {
+        const res = await fetch(API_URL, { redirect: 'follow' });
+        const data = await res.json();
+        const status = data.quizVisivel === 'ATIVO';
+        
+        setQuizAtivo(status);
+        localStorage.setItem('d20_quiz_visivel', data.quizVisivel);
+      } catch (err) {
+        console.error("Erro ao verificar status do quiz:", err);
+      }
+    };
+
+    checkQuizStatus();
+    const interval = setInterval(checkQuizStatus, 10000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <motion.div 
       key="welcome"
@@ -29,7 +54,12 @@ export default function WelcomeScreen({ logoImg, onStart, onInfo }) {
       ></div>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-zinc-950/80 via-transparent to-zinc-950/90"></div>
 
-      <motion.div className="relative z-20 flex flex-col items-center" variants={containerVariants} initial="hidden" animate="visible">
+      <motion.div 
+        className="relative z-20 flex flex-col items-center justify-center w-full" 
+        variants={containerVariants} 
+        initial="hidden" 
+        animate="visible"
+      >
         <motion.div 
           className="w-40 h-40 mb-10 flex items-center justify-center overflow-hidden"
           animate={{ scale: [1, 1.05, 1], opacity: [0.9, 1, 0.9] }}
@@ -37,24 +67,45 @@ export default function WelcomeScreen({ logoImg, onStart, onInfo }) {
         >
           <img src={logoImg} alt="Logo D20" className="max-w-full max-h-full object-contain" />
         </motion.div>
-        <motion.h1 variants={itemVariants} className="text-3xl font-bold text-white mb-5 tracking-tight">Bem-vindo ao D20 Bar!</motion.h1>
+        
+        <motion.h1 variants={itemVariants} className="text-3xl font-bold text-white mb-5 tracking-tight">
+          Bem-vindo ao D20 Bar!
+        </motion.h1>
+        
         <motion.p variants={itemVariants} className="text-white/90 text-base leading-relaxed max-w-xs mb-5 font-light">
           O point oficial para quem curte boa música, comida de verdade e aquele toque de cultura pop. Traga seu bando, escolha seu drink e aproveite o melhor do nosso multiverso!
         </motion.p>
-        <motion.p variants={itemVariants} className="text-white/90 text-base leading-relaxed max-w-xs mb-14 font-light italic">Portas abertas de Quarta a Sábado.</motion.p>
-        <motion.button 
-          variants={itemVariants}
-          onClick={onStart} 
-          className="bg-d20-amarelo text-d20-azul px-10 py-5 rounded-full font-retro text-[12px] active:scale-95 transition-all uppercase hover:bg-white hover:text-d20-azul"
-        >
-          Press Start 2P
-        </motion.button>
+        
+        <motion.p variants={itemVariants} className="text-white/90 text-base leading-relaxed max-w-xs mb-14 font-light italic">
+          Portas abertas de Quarta a Sábado.
+        </motion.p>
+
+        <div className="flex flex-col gap-4 items-center justify-center w-full">
+          <motion.button 
+            variants={itemVariants}
+            onClick={onStart} 
+            className="bg-d20-amarelo text-d20-azul px-10 py-5 rounded-full font-retro text-[12px] active:scale-95 transition-all uppercase hover:bg-white hover:text-d20-azul"
+          >
+            Press Start 2P
+          </motion.button>
+
+          {quizAtivo && (
+            <motion.button 
+              variants={itemVariants}
+              onClick={onQuiz} 
+              className="border-2 border-d20-amarelo text-d20-amarelo px-10 py-3 rounded-full font-retro text-[10px] active:scale-95 transition-all uppercase hover:bg-d20-amarelo hover:text-d20-azul"
+            >
+              Entrar no Quiz
+            </motion.button>
+          )}
+        </div>
       </motion.div>
-              <button 
+
+      <button 
         onClick={onInfo}
         className="fixed bottom-8 right-8 z-50 p-4 bg-d20-amarelo text-d20-azul rounded-full shadow-2xl active:scale-90 transition-transform">
-        <Info size={24} /> {/* Ou use o ícone "Info" da Lucide */}
-        </button>
+        <Info size={24} />
+      </button>
     </motion.div>
   );
 }
