@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import WelcomeScreen from './components/welcomeScreen';
-import MenuScreen from './components/menuScreen';
-import InfoScreen from './components/infoScreen';
+import WelcomeScreen from './components/WelcomeScreen';
+import MenuScreen from './components/MenuScreen';
+import InfoScreen from './components/InfoScreen';
 import ChallengeScreen from './components/ChallengeScreen';
+import QuizPage from './components/QuizPage';
 import logoImg from './assets/logo.png';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
               logoImg={logoImg} 
               onStart={() => setCurrentScreen('menu')} 
               onInfo={() => setCurrentScreen('info')} 
+              onQuiz={() => setCurrentScreen('quiz')}
             />
           )}
 
@@ -32,7 +34,7 @@ export default function App() {
               darkMode={darkMode} 
               toggleTheme={toggleTheme} 
               onBack={() => setCurrentScreen('welcome')} 
-              onChallenge={() => setCurrentScreen('challenge')} // 2. Passa a função para o botão do cardápio
+              onChallenge={() => setCurrentScreen('challenge')}
             />
           )}
 
@@ -45,13 +47,21 @@ export default function App() {
             />
           )}
 
-          {/* 3. Lógica para exibir a tela de Dinâmicas */}
           {currentScreen === 'challenge' && (
             <ChallengeScreen 
               key="challenge"
               darkMode={darkMode}
               toggleTheme={toggleTheme}
-              onBack={() => setCurrentScreen('menu')} // Volta para o cardápio
+              onBack={() => setCurrentScreen('menu')} 
+            />
+          )}
+
+          {currentScreen === 'quiz' && (
+            <QuizPage 
+              key="quiz"
+              darkMode={darkMode}
+              toggleTheme={toggleTheme}
+              onBack={() => setCurrentScreen('welcome')} 
             />
           )}
 
