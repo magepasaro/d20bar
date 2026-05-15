@@ -191,8 +191,14 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
         ) : (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-between p-4 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-d20-amarelo shadow-md">
-                <img src={fotoBase64} alt={equipe} className="w-full h-full object-cover" />
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-d20-amarelo shadow-md flex items-center justify-center bg-zinc-100 dark:bg-zinc-800">
+                {fotoBase64 ? (
+                  <img src={fotoBase64} alt={equipe} className="w-full h-full object-cover" />
+                ) : (
+                  <span className="text-lg font-black text-d20-azul dark:text-d20-amarelo uppercase">
+                    {equipe?.charAt(0) || '?'}
+                  </span>
+                )}
               </div>
               <div>
                 <p className="text-[9px] font-black text-zinc-400 uppercase tracking-widest leading-none">Equipe</p>
