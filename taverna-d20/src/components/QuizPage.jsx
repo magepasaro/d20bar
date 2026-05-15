@@ -4,7 +4,6 @@ import { Sun, Moon, ArrowLeft, Camera, Clock, CheckCircle2 } from 'lucide-react'
 import Ranking from './Ranking';
 
 const API_URL = 'https://script.google.com/macros/s/AKfycbwmgqWeOvVjekON-dyCwZsmI1sAinDyIGGEYz4f7SWXKO-vpyosJohSDI6rKznqq1eQ/exec'; 
-const QUIZ_VERSION = 'v3'; // Atualizado para limpar caches antigos
 
 export default function QuizPage({ darkMode, toggleTheme, onBack }) {
   const [equipe, setEquipe] = useState('');
@@ -19,15 +18,9 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
 
   // Inicialização e Recuperação de Estado
   useEffect(() => {
-    const versaoSalva = localStorage.getItem('d20_quiz_version');
-    if (versaoSalva !== QUIZ_VERSION) {
-      localStorage.clear();
-      localStorage.setItem('d20_quiz_version', QUIZ_VERSION);
-    } else {
-      setEquipe(localStorage.getItem('d20_equipe') || '');
-      setFotoBase64(localStorage.getItem('d20_foto') || '');
-      setEquipeRegistrada(localStorage.getItem('d20_registrada') === 'true');
-    }
+    setEquipe(localStorage.getItem('d20_equipe') || '');
+    setFotoBase64(localStorage.getItem('d20_foto') || '');
+    setEquipeRegistrada(localStorage.getItem('d20_registrada') === 'true');
   }, []);
 
   const fetchData = useCallback(async () => {
@@ -35,6 +28,19 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
       const res = await fetch(API_URL, { redirect: 'follow' });
       const data = await res.json();
       
+      // Lógica de Reset Dinâmico por Versão (Célula B6 da Planilha)
+      const versaoSalva = localStorage.getItem('d20_quiz_version');
+      if (data.versaoQuiz && data.versaoQuiz !== versaoSalva) {
+        localStorage.clear();
+        localStorage.setItem('d20_quiz_version', data.versaoQuiz);
+        setEquipe('');
+        setFotoBase64('');
+        setEquipeRegistrada(false);
+        setJaRespondeu(false);
+        setResposta('');
+        return; // Interrompe para processar o reset
+      }
+
       setDadosQuiz(prev => {
         const novaPerguntaId = data.perguntaAtiva?.id;
         const respondidaID = localStorage.getItem('d20_last_responded_id');
@@ -44,7 +50,6 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
           setTempoRestante(data.tempoOriginal || 120);
           setResposta('');
           
-          // Verifica se essa "nova" pergunta já foi respondida antes de um refresh/saída
           if (novaPerguntaId && String(novaPerguntaId) === respondidaID) {
             setJaRespondeu(true);
           } else {
@@ -115,7 +120,6 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
         body: JSON.stringify({ equipe, id: idAtual, resposta })
       });
       setJaRespondeu(true); 
-      // Salva no navegador que esta pergunta específica já foi feita
       localStorage.setItem('d20_last_responded_id', String(idAtual));
       fetchData();
     } catch (e) {
@@ -147,7 +151,6 @@ export default function QuizPage({ darkMode, toggleTheme, onBack }) {
       </header>
 
       <main className="p-6 pb-24 max-w-md mx-auto space-y-12">
-        {/* Seção de Identificação */}
         {!equipeRegistrada ? (
           <section className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
             <div className="text-center space-y-2">
