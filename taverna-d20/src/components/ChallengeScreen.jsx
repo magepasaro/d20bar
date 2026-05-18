@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Sun, Moon, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
-import { menuData } from '../data/menuData'; // Ajuste o caminho conforme a sua estrutura
+import { menuData } from '../data/menuData'; 
 
 import bannerImg from '../assets/banner-d20-challenge.png'; 
-import akinatorBannerImg from '../assets/banner-akinator.png'; // Substitua pelo seu banner do assistente
+import akinatorBannerImg from '../assets/banner-akinator.png';
 
 export default function ChallengeScreen({ onBack, darkMode, toggleTheme }) {
   // Achata todos os itens de todas as categorias para a busca do Akinator
