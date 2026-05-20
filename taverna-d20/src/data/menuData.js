@@ -11,8 +11,8 @@ export const menuData = [
         "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "suave", "restricao": ["com-alcool"], "tamanho": "galera" }
       },
       {
-        "name": "Original - 600ml",
-        "price": "14,00",
+        "name": "Litrão de Original",
+        "price": "17,00",
         "desc": "Clássica, gelada e sem erro.",
         "image": "/images/fotos/original.webp",
         "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "suave", "restricao": ["com-alcool"], "tamanho": "galera" }
@@ -43,6 +43,20 @@ export const menuData = [
         "price": "13,00",
         "desc": "Longneck - Cerveja puro malte com herança alemã e descida suave.",
         "image": "/images/fotos/cerveja04.jpg",
+        "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "suave", "restricao": ["com-alcool"], "tamanho": "individual" }
+      },
+      {
+        "name": "Stella Artois",
+        "price": "13,00",
+        "desc": "O clássico brinde belga, sempre impecável.",
+        "image": "/images/fotos/cerveja09.jpg",
+        "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "suave", "restricao": ["com-alcool"], "tamanho": "individual" }
+      },
+      {
+        "name": "Stella Artois - Sem Glúten",
+        "price": "13,00",
+        "desc": "Todo o sabor e sofisticação de Stella, agora para todos.",
+        "image": "/images/fotos/cerveja10.webp",
         "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "suave", "restricao": ["com-alcool"], "tamanho": "individual" }
       },
       {
@@ -322,13 +336,6 @@ export const menuData = [
     "id": "drinks-tradicionais",
     "title": "Drinks Tradicionais",
     "items": [
-      {
-        "name": "Açaí com vodka",
-        "price": "22,00",
-        "desc": "O combo de energia e diversão. O \"buff\" perfeito para as noites mais longas.",
-        "image": "/images/fotos/acai-vodka.jpeg",
-        "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "doce", "restricao": ["com-alcool"], "tamanho": "individual" }
-      },
       {
         "name": "Basil smash",
         "price": "18,00",
@@ -705,14 +712,14 @@ export const menuData = [
       },
       {
         "name": "X20 Cheddar Bomb com batata",
-        "price": "28,00",
+        "price": "30,00",
         "desc": "O encontro perfeito entre o salgado do bacon e o adocicado da cebola caramelizada. Leva burger de carne, muito cheddar derretido e bacon em cubinhos. É o novo favorito da galera!",
         "image": "/images/lanches.jpg",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "agridoce", "restricao": [], "tamanho": "individual" }
       },
       {
         "name": "X20 Cheddar Bomb sem batata",
-        "price": "24,00",
+        "price": "26,00",
         "desc": "O encontro perfeito entre o salgado do bacon e o adocicado da cebola caramelizada. Leva burger de carne, muito cheddar derretido e bacon em cubinhos, sem acompanhamentos.",
         "image": "/images/lanches.jpg",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "agridoce", "restricao": [], "tamanho": "individual" }
