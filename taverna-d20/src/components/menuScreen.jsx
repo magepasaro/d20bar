@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Sun, Moon, Search, X } from 'lucide-react';
+import { Sun, Moon, Search, X, ArrowLeft } from 'lucide-react';
 import { menuData } from '../data/menuData';
-import { ArrowLeft } from 'lucide-react';
 
-export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge }) {
+export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge, bannerGif = "./src/assets/banner-indecisos.gif" }) {
   const [activeSection, setActiveSection] = useState('bebidas');
   const [searchTerm, setSearchTerm] = useState("");
   const navRef = useRef(null);
@@ -13,7 +12,6 @@ export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge 
     const handleScroll = () => {
       if (searchTerm !== "") return;
       const scrollPosition = window.scrollY + 200; 
-
       menuData.forEach(section => {
         const element = document.getElementById(section.id);
         if (element && scrollPosition >= element.offsetTop && scrollPosition < element.offsetTop + element.offsetHeight) {
@@ -48,11 +46,13 @@ export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge 
 
   return (
     <motion.div key="menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="relative">
+      
+      {/* CATEGORIAS */}
       <div className="sticky top-0 z-50">
         <header className="bg-d20-fundo-light/90 dark:bg-d20-fundo-dark/90 backdrop-blur-lg px-6 py-4 flex justify-between items-center border-b border-zinc-200 dark:border-zinc-800 shadow-sm transition-colors">
           <div onClick={onBack} className="flex items-center gap-2 cursor-pointer active:scale-95 transition-transform">
             <span className="font-black uppercase text-base tracking-tighter text-d20-azul dark:text-d20-amarelo">
-            <ArrowLeft size={18} />
+              <ArrowLeft size={18} />
             </span>
           </div>
           <button onClick={toggleTheme} className="p-2 bg-zinc-200 dark:bg-zinc-800 rounded-full active:scale-90 transition-transform">
@@ -95,7 +95,23 @@ export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge 
         )}
       </div>
 
-      <main className="p-6 pb-40 space-y-16">
+      {/* PRODUTOS */}
+      <main className="p-6 pb-24 space-y-16">
+        
+        {/* Banner GIF  */}
+        <div className="-mt-4 mb-4">
+          <div 
+            onClick={onChallenge} 
+            className="w-full h-24 rounded-xl overflow-hidden cursor-pointer shadow-sm active:scale-[0.99] transition-transform border border-zinc-200 dark:border-zinc-800"
+          >
+            <img 
+              src={bannerGif} 
+              alt="Não sabe o que pedir? Clique aqui!" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
         {filteredMenu.length > 0 ? (
           filteredMenu.map((section) => (
             <section key={section.id} id={section.id} className="scroll-mt-52">
@@ -128,16 +144,6 @@ export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge 
           <div className="text-center py-20 opacity-50 italic text-zinc-500 dark:text-zinc-400">Nenhum item encontrado...</div>
         )}
       </main>
-
-      <button 
-      onClick={onChallenge}
-      className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-d20-azul dark:bg-d20-amarelo text-white dark:text-d20-azul px-6 py-3 rounded-full shadow-2xl z-50 whitespace-nowrap active:scale-95 transition-all "
-      >
-      <span className="font-black text-sm uppercase tracking-widest flex items-center gap-2">
-      Não sabe o que pedir?
-      </span>
-</button>
-
     </motion.div>
   );
 }
