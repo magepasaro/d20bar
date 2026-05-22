@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Sun, Moon, Search, X, ArrowLeft } from 'lucide-react';
 import { menuData } from '../data/menuData';
+import bannerGif from '../assets/banner-indecisos.gif';
 
-export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge, bannerGif = "./src/assets/banner-indecisos.gif" }) {
+export default function MenuScreen({ darkMode, toggleTheme, onBack, onChallenge }) {
   const [activeSection, setActiveSection] = useState('bebidas');
   const [searchTerm, setSearchTerm] = useState("");
   const navRef = useRef(null);
