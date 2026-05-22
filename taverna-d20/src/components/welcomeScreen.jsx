@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Info } from 'lucide-react';
+import AnnouncementPopup from './AnnouncementPopup'; 
 
 const API_URL = 'https://script.google.com/macros/s/AKfycbwmgqWeOvVjekON-dyCwZsmI1sAinDyIGGEYz4f7SWXKO-vpyosJohSDI6rKznqq1eQ/exec';
+
+// =========================================================================
+//  PAINEL DE CONTROLE DO POPUP (ALTERE APENAS ESTE BLOCO ABAIXO)
+// =========================================================================
+const CONFIG_ANUNCIO = {
+  temAnuncio: true,                         // true = Ativado (com popup) | false = Desativado (sem popup)
+  id: "quiz_noite_21_maio",                // Mude sempre que trocar a arte para resetar o checkbox dos clientes
+  imagem: "../public/images/anuncio01.png"        // Caminho da imagem/arte do seu evento
+};
+// =========================================================================
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -106,6 +117,15 @@ export default function WelcomeScreen({ logoImg, onStart, onInfo, onQuiz }) {
         className="fixed bottom-8 right-8 z-50 p-4 bg-d20-amarelo text-d20-azul rounded-full shadow-2xl active:scale-90 transition-transform">
         <Info size={24} />
       </button>
+
+      {/* O POPUP SÓ RENDERIZA SE 'temAnuncio' FOR TRUE */}
+      {CONFIG_ANUNCIO.temAnuncio && (
+        <AnnouncementPopup 
+          src={CONFIG_ANUNCIO.imagem} 
+          adId={CONFIG_ANUNCIO.id} 
+        />
+      )}
+
     </motion.div>
   );
 }
