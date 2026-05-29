@@ -87,6 +87,13 @@ export const menuData = [
     "title": "Doses",
     "items": [
       {
+        "name": "Rainbow Shot",
+        "price": "30,00",
+        "desc": "Uma sequência perfeita de 6 shots que viaja do azul ao vermelho vibrante. Perfeito para abrir a noite, registrar o momento e dividir com a galera.",
+        "image": "/images/fotos/rainbow.png",
+        "atributos": { "vibe": "beber", "perfil": "dose", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "galera" }
+      },
+      {
         "name": "Cachaça",
         "price": "5,00",
         "desc": "O espírito brasileiro em uma dose. Simples e potente.",
