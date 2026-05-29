@@ -745,11 +745,25 @@ export const menuData = [
     "title": "Porções",
     "items": [
       {
-        "name": "Amendoins",
+        "name": "Amendoins - Aperitivo",
         "price": "10,00",
         "desc": "O petisco de entrada ideal para acompanhar sua primeira cerveja.",
         "image": "/images/fotos/amendoim.jpg",
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["vegano", "veggie"], "tamanho": "galera" }
+      },
+      {
+        "name": "Queijo - Aperitivo",
+        "price": "10,00",
+        "desc": "Mussarela em cubos bem regada no azeite com ervas. Simples, clássico e perfeito com uma cerveja gelada.",
+        "image": "/images/fotos/queijo.png",
+        "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "galera" }
+      },
+      {
+        "name": "Patê de Frango - Aperitivo",
+        "price": "10,00",
+        "desc": "Nosso patê de frango super cremoso com toque de cenoura e cheiro-verde. Servido com torradinhas crocantes.",
+        "image": "/images/fotos/pate.png",
+        "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": [], "tamanho": "galera" }
       },
       {
         "name": "D3",
