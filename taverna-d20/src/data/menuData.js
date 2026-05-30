@@ -760,14 +760,14 @@ export const menuData = [
       },
       {
         "name": "Queijo - Aperitivo",
-        "price": "10,00",
+        "price": "15,00",
         "desc": "Mussarela em cubos bem regada no azeite com ervas. Simples, clássico e perfeito com uma cerveja gelada.",
         "image": "/images/fotos/queijo.png",
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "galera" }
       },
       {
         "name": "Patê de Frango - Aperitivo",
-        "price": "10,00",
+        "price": "15,00",
         "desc": "Nosso patê de frango super cremoso com toque de cenoura e cheiro-verde. Servido com torradinhas crocantes.",
         "image": "/images/fotos/pate.png",
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": [], "tamanho": "galera" }
