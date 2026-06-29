@@ -9,7 +9,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwmgqWeOvVjekON-dyCwZsm
 //  PAINEL DE CONTROLE DO POPUP (ALTERE APENAS ESTE BLOCO ABAIXO)
 // =========================================================================
 const CONFIG_ANUNCIO = {
-  temAnuncio: true,                         // true = Ativado (com popup) | false = Desativado (sem popup)
+  temAnuncio: false,                         // true = Ativado (com popup) | false = Desativado (sem popup)
   id: "festa_junina",                // Mude sempre que trocar a arte para resetar o checkbox dos clientes
   imagem: "/images/do D20.png"        // Caminho da imagem/arte do seu evento
 };
