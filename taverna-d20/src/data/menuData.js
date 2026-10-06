@@ -102,7 +102,7 @@ export const menuData = [
       },
       {
         "name": "Cynar",
-        "price": "7,00",
+        "price": "10,00",
         "desc": "Dose do licor de alcachofra para quem aprecia sabores herbáceos.",
         "image": "/images/fotos/doses.jpg",
         "atributos": { "vibe": "beber", "perfil": "dose", "sabor": "amargo", "restricao": ["com-alcool"], "tamanho": "individual" }
