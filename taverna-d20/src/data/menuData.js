@@ -25,6 +25,13 @@ export const menuData = [
         "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "suave", "restricao": ["com-alcool"], "tamanho": "individual" }
       },
       {
+        "name": "Flying Fish",
+        "price": "13,00",
+        "desc": "Longneck - Sabor frutado, cítrico, levemente adocicado e extremamente refrescante..",
+        "image": "/images/fotos/cerveja-ff.jpg",
+        "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "suave", "restricao": ["com-alcool"], "tamanho": "individual" }
+      },
+      {
         "name": "Heineken",
         "price": "13,00",
         "desc": "Longneck - A clássica verde gelada para acompanhar qualquer partida.",
@@ -58,27 +65,6 @@ export const menuData = [
         "desc": "Todo o sabor e sofisticação de Stella, agora para todos.",
         "image": "/images/fotos/cerveja10.webp",
         "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "suave", "restricao": ["com-alcool"], "tamanho": "individual" }
-      },
-      {
-        "name": "Patagonia amber lager",
-        "price": "24,00",
-        "desc": "Notas de caramelo e cor avermelhada para paladares exploradores.",
-        "image": "/images/fotos/cerveja06.jpg",
-        "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "individual" }
-      },
-      {
-        "name": "Patagonia ipa",
-        "price": "24,00",
-        "desc": "Amargor equilibrado com notas cítricas para aventureiros experientes.",
-        "image": "/images/fotos/cerveja07.webp",
-        "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "amargo", "restricao": ["com-alcool"], "tamanho": "individual" }
-      },
-      {
-        "name": "Patagonia weisse",
-        "price": "24,00",
-        "desc": "Cerveja de trigo refrescante com notas de laranja e semente de coentro.",
-        "image": "/images/fotos/cerveja08.jpg",
-        "atributos": { "vibe": "beber", "perfil": "cerveja", "sabor": "citrico", "restricao": ["com-alcool"], "tamanho": "individual" }
       }
     ]
   },
@@ -88,7 +74,7 @@ export const menuData = [
     "items": [
       {
         "name": "Rainbow Shot",
-        "price": "30,00",
+        "price": "35,00",
         "desc": "Uma sequência perfeita de 6 shots que viaja do azul ao vermelho vibrante. Perfeito para abrir a noite, registrar o momento e dividir com a galera.",
         "image": "/images/fotos/rainbow.png",
         "atributos": { "vibe": "beber", "perfil": "dose", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "galera" }
@@ -102,14 +88,14 @@ export const menuData = [
       },
       {
         "name": "Campari",
-        "price": "10,00",
+        "price": "12,00",
         "desc": "Dose do clássico aperitivo amargo italiano de cor rubi.",
         "image": "/images/fotos/doses.jpg",
         "atributos": { "vibe": "beber", "perfil": "dose", "sabor": "amargo", "restricao": ["com-alcool"], "tamanho": "individual" }
       },
       {
         "name": "Conhaque",
-        "price": "10,00",
+        "price": "12,00",
         "desc": "Aquecimento imediato para dias frios na taverna.",
         "image": "/images/fotos/doses.jpg",
         "atributos": { "vibe": "beber", "perfil": "dose", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -130,14 +116,14 @@ export const menuData = [
       },
       {
         "name": "Jack daniels",
-        "price": "26,00",
+        "price": "28,00",
         "desc": "O clássico do Tennessee. Sabor amadeirado e inconfundível.",
         "image": "/images/fotos/doses.jpg",
         "atributos": { "vibe": "beber", "perfil": "dose", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "individual" }
       },
       {
         "name": "Red label",
-        "price": "20,00",
+        "price": "22,00",
         "desc": "O whisky escocês que dispensa apresentações. Marcante e equilibrado.",
         "image": "/images/fotos/doses.jpg",
         "atributos": { "vibe": "beber", "perfil": "dose", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -192,7 +178,7 @@ export const menuData = [
       },
       {
         "name": "Carambolada",
-        "price": "18,00",
+        "price": "20,00",
         "desc": "Mistura brasileira sazonal de conhaque com shrub de carambola e guaraná.",
         "image": "/images/fotos/cynar.png",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "citrico", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -255,7 +241,7 @@ export const menuData = [
       },
       {
         "name": "Johnnie jones",
-        "price": "28,00",
+        "price": "30,00",
         "desc": "Ousado e marcante: Johnnie Red com canela e bitter de café.",
         "image": "/images/fotos/Johnnie Jones.jpg",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -283,7 +269,7 @@ export const menuData = [
       },
       {
         "name": "Olhar da penitencia",
-        "price": "15,00",
+        "price": "16,00",
         "desc": "Inspirado no Motoqueiro Fantasma: intenso, ardente e marcante como o fogo.",
         "image": "/images/fotos/Olhar da Penitência.jpg",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -297,7 +283,7 @@ export const menuData = [
       },
       {
         "name": "Tão tão distante",
-        "price": "20,00",
+        "price": "22,00",
         "desc": "Vindo direto de um reino muito distante com vodka, vermute bianco e kiwi.",
         "image": "/images/fotos/Tão Tão Distante.jpg",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "citrico", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -325,7 +311,7 @@ export const menuData = [
       },
       {
         "name": "Sharkboy",
-        "price": "20,00",
+        "price": "22,00",
         "desc": "Refrescância visual e gustativa em um clássico de cor azul hipnotizante.",
         "image": "/images/fotos/lagoa azul.jpg",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "citrico", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -352,7 +338,7 @@ export const menuData = [
       },
       {
         "name": "Boulevardier",
-        "price": "28,00",
+        "price": "30,00",
         "desc": "O primo intenso do Negroni feito com Bourbon para um sabor rico e intrigante.",
         "image": "/images/fotos/boulevardier.png",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "amargo", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -394,14 +380,14 @@ export const menuData = [
       },
       {
         "name": "Cynar tonica",
-        "price": "16,00",
+        "price": "18,00",
         "desc": "Notas botânicas de alcachofra em uma mistura leve e surpreendentemente refrescante.",
         "image": "/images/fotos/cynar.png",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "amargo", "restricao": ["com-alcool"], "tamanho": "individual" }
       },
       {
         "name": "Double cynar tonica",
-        "price": "28,00",
+        "price": "34,00",
         "desc": "Para quem já subiu de nível e aprecia o dobro do sabor herbáceo do Cynar.",
         "image": "/images/fotos/cynar.png",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "amargo", "restricao": ["com-alcool"], "tamanho": "galera" }
@@ -422,7 +408,7 @@ export const menuData = [
       },
       {
         "name": "Jack n coke",
-        "price": "30,00",
+        "price": "32,00",
         "desc": "A aliança lendária entre Jack Daniel's e Coca-Cola. Impossível resistir.",
         "image": "/images/fotos/jack-n-coke.jpg",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -443,7 +429,7 @@ export const menuData = [
       },
       {
         "name": "Old fashioned",
-        "price": "28,00",
+        "price": "30,00",
         "desc": "O drink dos veteranos. Whisky, açúcar e bitters em uma execução clássica.",
         "image": "/images/fotos/old-fashioned.jpg",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "intenso", "restricao": ["com-alcool"], "tamanho": "individual" }
@@ -587,21 +573,21 @@ export const menuData = [
     "items": [
       {
         "name": "Maracujá suíço",
-        "price": "12,00",
+        "price": "14,00",
         "desc": "Versão cremosa e refrescante batida com leite condensado para um \"buff\" extra de energia.",
         "image": "/images/fotos/suco05.png",
         "atributos": { "vibe": "beber", "perfil": "suco", "sabor": "doce", "restricao": ["sem-alcool", "veggie"], "tamanho": "individual" }
       },
       {
         "name": "Maracujá com morango",
-        "price": "12,00",
+        "price": "14,00",
         "desc": "Um combo crítico de frutas tropicais e vermelhas para refrescar sua jornada.",
         "image": "/images/fotos/suco02.jpg",
         "atributos": { "vibe": "beber", "perfil": "suco", "sabor": "agridoce", "restricao": ["sem-alcool"], "tamanho": "individual" }
       },
       {
         "name": "Maracujá",
-        "price": "10,00",
+        "price": "12,00",
         "desc": "O clássico calmante natural para manter o foco durante as jogadas mais tensas.",
         "image": "/images/fotos/suco01.jpg",
         "atributos": { "vibe": "beber", "perfil": "suco", "sabor": "citrico", "restricao": ["sem-alcool"], "tamanho": "individual" }
@@ -677,56 +663,56 @@ export const menuData = [
     "items": [
       {
         "name": "X20 carne com batata",
-        "price": "30,00",
+        "price": "32,00",
         "desc": "O combo completo: nosso burger épico acompanhado de batatas crocantes.",
         "image": "/images/fotos/X20.jpg",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "salgado", "restricao": [], "tamanho": "individual" }
       },
       {
         "name": "X20 carne sem batata",
-        "price": "26,00",
+        "price": "28,00",
         "desc": "Foco total no burger! O X20 clássico para quem quer ir direto ao ponto.",
         "image": "/images/fotos/x20 sem batata.png",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "salgado", "restricao": [], "tamanho": "individual" }
       },
       {
         "name": "X20 vegetariano com batata",
-        "price": "27,00",
+        "price": "30,00",
         "desc": "A opção veggie completa com batatas. Sabor que não deixa ninguém para trás.",
         "image": "/images/fotos/X20.jpg",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "individual" }
       },
       {
         "name": "X20 vegetariano sem batata",
-        "price": "24,00",
+        "price": "26,00",
         "desc": "O burger vegetariano para quem quer uma refeição leve e saborosa.",
         "image": "/images/fotos/x20 sem batata.png",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "individual" }
       },
       {
         "name": "X20 vegano com batata",
-        "price": "25,00",
+        "price": "27,00",
         "desc": "Loot 100% vegetal acompanhado de batatas fritas crocantes.",
         "image": "/images/fotos/X20.jpg",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "salgado", "restricao": ["vegano", "veggie"], "tamanho": "individual" }
       },
       {
         "name": "X20 vegano sem batata",
-        "price": "22,00",
+        "price": "24,00",
         "desc": "O burger vegano essencial para quem busca sabor e consciência.",
         "image": "/images/fotos/x20 sem batata.png",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "salgado", "restricao": ["vegano", "veggie"], "tamanho": "individual" }
       },
       {
         "name": "X20 Cheddar Bomb com batata",
-        "price": "30,00",
+        "price": "32,00",
         "desc": "O encontro perfeito entre o salgado do bacon e o adocicado da cebola caramelizada. Leva burger de carne, muito cheddar derretido e bacon em cubinhos. É o novo favorito da galera!",
         "image": "/images/lanches.jpg",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "agridoce", "restricao": [], "tamanho": "individual" }
       },
       {
         "name": "X20 Cheddar Bomb sem batata",
-        "price": "26,00",
+        "price": "28,00",
         "desc": "O encontro perfeito entre o salgado do bacon e o adocicado da cebola caramelizada. Leva burger de carne, muito cheddar derretido e bacon em cubinhos, sem acompanhamentos.",
         "image": "/images/lanches.jpg",
         "atributos": { "vibe": "comer", "perfil": "lanche", "sabor": "agridoce", "restricao": [], "tamanho": "individual" }
@@ -780,57 +766,15 @@ export const menuData = [
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "galera" }
       },
       {
-        "name": "D3 com queijo",
-        "price": "34,00",
-        "desc": "O trio lendário (fritas, polenta e mandioca) coberto com queijo derretido.",
-        "image": "/images/fotos/D3.jpg",
-        "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "galera" }
-      },
-      {
-        "name": "D3 com bacon",
-        "price": "34,00",
-        "desc": "Trio clássico de petiscos acompanhado de bacon crocante.",
-        "image": "/images/fotos/D3.jpg",
-        "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": [], "tamanho": "galera" }
-      },
-      {
-        "name": "D3 com queijo e bacon",
-        "price": "38,00",
-        "desc": "A party definitiva: Polenta, fritas e mandioca cobertas com muito queijo e bacon.",
-        "image": "/images/fotos/D3.jpg",
-        "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": [], "tamanho": "galera" }
-      },
-      {
         "name": "Fritas",
-        "price": "29,00",
+        "price": "30,00",
         "desc": "Batatas fritas tradicionais, sempre quentes e crocantes.",
         "image": "/images/fotos/01.jpg",
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "galera" }
       },
       {
-        "name": "Fritas com bacon",
-        "price": "34,00",
-        "desc": "A porção clássica de batatas com o sabor defumado do bacon.",
-        "image": "/images/fotos/02.jpg",
-        "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": [], "tamanho": "galera" }
-      },
-      {
-        "name": "Fritas com queijo",
-        "price": "34,00",
-        "desc": "Batatas douradas e crocantes sob uma camada generosa de queijo derretido.",
-        "image": "/images/fotos/02.jpg",
-        "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "galera" }
-      },
-      {
-        "name": "Fritas com queijo e bacon",
-        "price": "38,00",
-        "desc": "O loot mais desejado: fritas, queijo derretido e bacon em cubos.",
-        "image": "/images/fotos/02.jpg",
-        "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": [], "tamanho": "galera" }
-      },
-      {
         "name": "Mandioca frita",
-        "price": "26,00",
+        "price": "28,00",
         "desc": "Mandioca macia por dentro e crocante por fora, frita na hora.",
         "image": "/images/fotos/01.jpg",
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "galera" }
@@ -844,7 +788,7 @@ export const menuData = [
       },
       {
         "name": "Calabresa acebolada",
-        "price": "28,00",
+        "price": "30,00",
         "desc": "A porção perfeita para dividir: calabresa fatiada com muita cebola na chapa.",
         "image": "/images/fotos/calabreza.jpg",
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": [], "tamanho": "galera" }
@@ -865,14 +809,14 @@ export const menuData = [
       },
       {
         "name": "Onion rings",
-        "price": "30,00",
+        "price": "32,00",
         "desc": "Anéis de cebola empanados e super crocantes. Um acerto crítico de textura.",
         "image": "/images/fotos/onion.jpg",
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "salgado", "restricao": ["veggie"], "tamanho": "galera" }
       },
       {
         "name": "Batata rústica",
-        "price": "28,00",
+        "price": "34,00",
         "desc": "Batatas com casca, temperadas e fritas com um toque caseiro.",
         "image": "/images/fotos/01.jpg",
         "atributos": { "vibe": "comer", "perfil": "porcao", "sabor": "intenso", "restricao": ["veggie"], "tamanho": "galera" }
@@ -966,20 +910,32 @@ export const menuData = [
         "image": "/images/diversos.jpg"
       },
       {
+        "name": "Adicional - hamburguer vegano",
+        "price": "5,00",
+        "desc": "Dobre o seu dano! Extra de 150g do nosso saboroso hamburguer vegano.",
+        "image": "/images/diversos.jpg"
+      },
+      {
+        "name": "Adicional - molho extra",
+        "price": "4,00",
+        "desc": "Molho Extra: Escolha o seu favorito para acompanhar e dar ainda mais sabor ao seu pedido.",
+        "image": "/images/diversos.jpg"
+      },     
+      {
         "name": "Adicional - parmesão",
-        "price": "7,00",
+        "price": "5,00",
         "desc": "Um upgrade de queijo parmesão ralado para elevar qualquer prato.",
         "image": "/images/diversos.jpg"
       },
       {
         "name": "Adicional - cheddar",
-        "price": "7,00",
+        "price": "5,00",
         "desc": "Adicione uma camada extra de queijo cheddar em qualquer item.",
         "image": "/images/diversos.jpg"
       },
       {
         "name": "Adicional - bacon",
-        "price": "7,00",
+        "price": "5,00",
         "desc": "Mais bacon crocante para turbinar sua porção ou lanche.",
         "image": "/images/diversos.jpg"
       },
