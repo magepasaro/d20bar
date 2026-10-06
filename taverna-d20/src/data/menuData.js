@@ -553,7 +553,7 @@ export const menuData = [
       },
       {
         "name": "Mocktail",
-        "price": "14,00",
+        "price": "15,00",
         "desc": "Toda a complexidade de um drink autoral, mas sem álcool. Para heróis sóbrios.",
         "image": "/images/fotos/mocktail.jpg",
         "atributos": { "vibe": "beber", "perfil": "drink", "sabor": "citrico", "restricao": ["sem-alcool"], "tamanho": "individual" }
