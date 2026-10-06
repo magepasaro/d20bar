@@ -560,7 +560,7 @@ export const menuData = [
       },
       {
         "name": "Chocolate quente",
-        "price": "14,00",
+        "price": "16,00",
         "desc": "Conforto em caneca: cremoso e perfeito para dias frios.",
         "image": "/images/fotos/chocolate-quente.avif",
         "atributos": { "vibe": "sobremesa", "perfil": "doce", "sabor": "doce", "restricao": ["sem-alcool", "veggie"], "tamanho": "individual" }
